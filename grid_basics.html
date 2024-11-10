@@ -4,8 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Basics</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            background-color: rgb(15, 15, 15);
+        }
+
+        #grid-container {
+            display: grid;
+
+        }
+
+        #grid-container > div:nth-of-type(1) {
+            background-color: cyan;
+        }
+
+        #grid-container > div:nth-of-type(2) {
+            background-color: tomato;
+        }
+
+        #grid-container > div:nth-of-type(3) {
+            background-color: magenta;
+        }
+
+        #grid-container > div:nth-of-type(4) {
+            background-color: limegreen;
+        }
+    </style>
 </head>
 <body>
-    
+    <div id="grid-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
 </body>
 </html>
