@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid Basics - Aufgabe 7</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        background-color: rgb(15, 15, 15);
+      }
+
+      #grid-container {
+        background-color: rgb(70, 70, 70);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 0.5rem;
+      }
+
+      #grid-container > div:nth-of-type(1) {
+        background-color: cyan;
+      }
+
+      #grid-container > div:nth-of-type(2) {
+        background-color: tomato;
+      }
+
+      #grid-container > div:nth-of-type(3) {
+        background-color: magenta;
+      }
+
+      #grid-container > div:nth-of-type(4) {
+        background-color: limegreen;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="grid-container">
+      <div>
+        Laborum commodo in consectetur dolore dolore et aute. Sint nulla incididunt ipsum incididunt voluptate aliqua tempor. Pariatur sint ea voluptate ad
+        ullamco non elit enim. Deserunt et elit irure duis duis exercitation ea ullamco. Aute minim enim adipisicing nulla quis eiusmod aliqua do est. Labore
+        incididunt sint sunt est eu proident sunt enim consectetur ipsum. In nisi do exercitation non. Voluptate do ut ex in adipisicing dolor et in pariatur
+        exercitation voluptate. Ea occaecat sit laboris aute id duis minim voluptate ut ad irure.
+      </div>
+      <div>
+        Laborum commodo in consectetur dolore dolore et aute. Sint nulla incididunt ipsum incididunt voluptate aliqua tempor. Pariatur sint ea voluptate ad
+        ullamco non elit enim. Deserunt et elit irure duis duis exercitation ea ullamco. Aute minim enim adipisicing nulla quis eiusmod aliqua do est. Labore
+        incididunt sint sunt est eu proident sunt enim consectetur ipsum. In nisi do exercitation non. Voluptate do ut ex in adipisicing dolor et in pariatur
+        exercitation voluptate. Ea occaecat sit laboris aute id duis minim voluptate ut ad irure. Laborum commodo in consectetur dolore dolore et aute. Sint
+        nulla incididunt ipsum incididunt voluptate aliqua tempor. Pariatur sint ea voluptate ad ullamco non elit enim. Deserunt et elit irure duis duis
+        exercitation ea ullamco. Aute minim enim adipisicing nulla quis eiusmod aliqua do est. Labore incididunt sint sunt est eu proident sunt enim consectetur
+        ipsum. In nisi do exercitation non. Voluptate do ut ex in adipisicing dolor et in pariatur exercitation voluptate. Ea occaecat sit laboris aute id duis
+        minim voluptate ut ad irure.
+      </div>
+      <div>
+        Laborum commodo in consectetur dolore dolore et aute. Sint nulla incididunt ipsum incididunt voluptate aliqua tempor. Pariatur sint ea voluptate ad
+        ullamco non elit enim. Deserunt et elit irure duis duis exercitation ea ullamco. Aute minim enim adipisicing nulla quis eiusmod aliqua do est. Labore
+        incididunt sint sunt est eu proident sunt enim consectetur ipsum. In nisi do exercitation non. Voluptate do ut ex in adipisicing dolor et in pariatur
+        exercitation voluptate. Ea occaecat sit laboris aute id duis minim voluptate ut ad irure.
+      </div>
+      <div>
+        Laborum commodo in consectetur dolore dolore et aute. Sint nulla incididunt ipsum incididunt voluptate aliqua tempor. Pariatur sint ea voluptate ad
+        ullamco non elit enim. Deserunt et elit irure duis duis exercitation ea ullamco. Aute minim enim adipisicing nulla quis eiusmod aliqua do est. Labore
+        incididunt sint sunt est eu proident sunt enim consectetur ipsum. In nisi do exercitation non. Voluptate do ut ex in adipisicing dolor et in pariatur
+        exercitation voluptate. Ea occaecat sit laboris aute id duis minim voluptate ut ad irure.
+      </div>
+    </div>
+  </body>
+</html>

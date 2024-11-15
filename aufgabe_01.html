@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Grid Basics</title>
+    <title>Grid Basics - Aufgabe 1</title>
     <style>
       * {
         box-sizing: border-box;
@@ -15,14 +15,12 @@
       #grid-container {
         background-color: rgb(70, 70, 70);
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: auto auto;
-        gap: 10px; /* Fügt 10px Abstand zwischen allen Grid-Zellen hinzu */
       }
 
       #grid-container > div:nth-of-type(1) {
         background-color: cyan;
-        grid-column: span 2;
       }
 
       #grid-container > div:nth-of-type(2) {
