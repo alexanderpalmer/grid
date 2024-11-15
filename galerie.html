@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Responsive Bildergalerie</title>
+    <style>
+      /* Basis-Stile für den gesamten Körper */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background: #f0f0f0;
+      }
+
+      /* Container für die Galerie */
+      .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 15px; /* Abstand zwischen den Bildern */
+        padding: 20px;
+        max-width: 1200px; /* Maximalbreite für die Galerie */
+        margin: auto; /* Zentriert die Galerie im Browserfenster */
+      }
+
+      /* Jedes Bild-Item */
+      .gallery-item {
+        overflow: hidden; /* Verhindert, dass Bilder über die Box hinausragen */
+        border-radius: 8px; /* Abgerundete Ecken für einen weicheren Look */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Leichter Schatten für Tiefe */
+        transition: transform 0.3s ease;
+      }
+
+      .gallery-item img {
+        width: 100%; /* Bilder nehmen die volle Breite des Containers ein */
+        height: auto; /* Verhältnis bleibt gleich */
+        display: block;
+      }
+
+      /* Hover-Effekt für die Bilder */
+      .gallery-item:hover {
+        transform: scale(1.05); /* Leichtes Vergrößern bei Hover */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallery-container">
+      <div class="gallery-item"><img src="https://placehold.co/300" alt="Bild 1" /></div>
+      <div class="gallery-item"><img src="https://placehold.co/300" alt="Bild 2" /></div>
+      <div class="gallery-item"><img src="https://placehold.co/300" alt="Bild 3" /></div>
+      <div class="gallery-item"><img src="https://placehold.co/300" alt="Bild 4" /></div>
+      <div class="gallery-item"><img src="https://placehold.co/300" alt="Bild 5" /></div>
+      <div class="gallery-item"><img src="https://placehold.co/300" alt="Bild 6" /></div>
+      <div class="gallery-item"><img src="https://placehold.co/300" alt="Bild 7" /></div>
+      <div class="gallery-item"><img src="https://placehold.co/300" alt="Bild 8" /></div>
+    </div>
+  </body>
+</html>

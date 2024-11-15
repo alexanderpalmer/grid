@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Vergleich zwischen auto-fit und auto-fill</title>
+    <style>
+      /* Allgemeine Stile */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        box-sizing: border-box;
+        background-color: #f0f0f0;
+      }
+
+      h1 {
+        margin-top: 40px;
+        color: #333;
+      }
+
+      /* Stile für die Galerien */
+      .gallery-auto-fit,
+      .gallery-auto-fill {
+        display: grid;
+        gap: 15px;
+        padding: 10px;
+        background: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        margin-bottom: 40px;
+      }
+
+      /* auto-fit Galerie */
+      .gallery-auto-fit {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      }
+
+      /* auto-fill Galerie */
+      .gallery-auto-fill {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      }
+
+      /* Stile für die Galerie-Items */
+      .item {
+        background-color: #2196f3;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        border-radius: 4px;
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Galerie mit auto-fit</h1>
+    <div class="gallery-auto-fit">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+
+    <h1>Galerie mit auto-fill</h1>
+    <div class="gallery-auto-fill">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+    </div>
+  </body>
+</html>
