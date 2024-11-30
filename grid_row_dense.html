@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Row vs. Row Dense Vergleich</title>
+    <style>
+        /* Allgemeine Stile */
+* {
+    box-sizing: border-box;
+}
+
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 40px;
+    color: #333;
+}
+
+/* Grid-Container mit `grid-auto-flow: row` */
+.grid-container-row {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3 Spalten mit je 100px */
+    grid-auto-flow: row; /* Normaler Fluss, ohne Lücken zu füllen */
+    gap: 10px;
+    margin-bottom: 40px;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+/* Grid-Container mit `grid-auto-flow: row dense` */
+.grid-container-row-dense {
+    display: grid;
+    grid-template-columns: repeat(3, 100px); /* 3 Spalten mit je 100px */
+    grid-auto-flow: row dense; /* Dichte Platzierung */
+    gap: 10px;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+/* Stile für die Items */
+.item {
+    background-color: #2196F3;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 1.2em;
+}
+
+/* Größen für die speziellen Items */
+.item1 {
+    grid-column: span 2; /* Nimmt zwei Spalten ein */
+    height: 100px;
+}
+
+.item4 {
+    grid-row: span 2; /* Nimmt zwei Reihen ein */
+    height: 220px; /* Extra hohe Box */
+}
+
+.item7 {
+    grid-column: span 2; /* Nimmt zwei Spalten ein */
+}
+
+    </style>
+</head>
+<body>
+    <h1>Grid mit `grid-auto-flow: row`</h1>
+    <div class="grid-container-row">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+    </div>
+
+    <h1>Grid mit `grid-auto-flow: row dense`</h1>
+    <div class="grid-container-row-dense">
+        <div class="item item1">1</div>
+        <div class="item item2">2</div>
+        <div class="item item3">3</div>
+        <div class="item item4">4</div>
+        <div class="item item5">5</div>
+        <div class="item item6">6</div>
+        <div class="item item7">7</div>
+        <div class="item item8">8</div>
+    </div>
+</body>
+</html>
