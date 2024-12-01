@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid-Tests</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+        * {
+            box-sizing: border-box;
+        }
+
+        body{ 
+            margin:0;
+            padding: 0;
+            height: 100vh;
+            background-image: linear-gradient(125deg, rgb(11, 11, 11), rgb(24, 24, 24), rgb(136, 24, 136));
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        h1 {
+            font-family: "Anton", sans-serif;
+            font-weight: 400;
+            font-size: 4vw;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            word-spacing: 0.1em;
+            background: linear-gradient(to right,#f32170, #ff6b08, #cf23cf, #eedd44,#cf23cf,#ff6b08, #f32170);
+            -webkit-background-clip: text;
+                    background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 300% 300%; 
+            
+            animation: gradientAnimation 5s linear infinite;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+              background-position: 0% 50%;
+            }
+            100% {
+              background-position: 100% 50%;
+            }
+        }
+
+        .wrapper {
+            padding: 10px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 4px;
+            grid-auto-flow: row dense;
+        }
+
+        .grid-container div {
+            background-color: rgb(138, 44, 226);
+            padding: 20px;
+            color: white;
+            border-radius: 6px;
+            transition: 0.5s transform, background-color ease-out;
+
+            &:hover {
+                background-color: #cf23cf;
+                transform: scale(95%);
+                transition: 0.2s transform, background-color linear;
+            }
+        }
+
+        .grid-container div:nth-of-type(2) {
+            grid-column: span 2;
+        }
+
+        .grid-container div:nth-of-type(4) {
+            grid-row: span 2;
+            height: 200px;
+        }
+
+        .grid-container div:nth-of-type(3) {
+         height: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Grid-Layout Demo mit grid-auto-flow</h1>
+    <div class="grid-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+    </div>
+    </div>
+</body>
+</html>
